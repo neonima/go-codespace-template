@@ -7,5 +7,4 @@ RUN go install github.com/haya14busa/goplay/cmd/goplay@latest
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 RUN go install honnef.co/go/tools/cmd/staticcheck@latest
 RUN go install golang.org/x/tools/gopls@latest
-RUN apt get update && apt get install -y htop
 USER codespace-go
