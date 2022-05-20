@@ -1,11 +1,11 @@
 FROM golang:1.18.2
-RUN go get -u golang.org/x/tools/gopls
-RUN go get -u github.com/cweill/gotests/gotests 
-RUN go get -u github.com/fatih/gomodifytags
-RUN go get -u github.com/josharian/impl
-RUN go get -u github.com/haya14busa/goplay/cmd/goplay
-RUN go get -u github.com/go-delve/delve/cmd/dlv
-RUN go get -u honnef.co/go/tools/cmd/staticcheck
-RUN go get -u golang.org/x/tools/gopls 
+RUN go install golang.org/x/tools/gopls@latest
+RUN go install github.com/cweill/gotests/gotests@latest 
+RUN go install github.com/fatih/gomodifytags@latest
+RUN go install github.com/josharian/impl@latest
+RUN go install github.com/haya14busa/goplay/cmd/goplay@latest
+RUN go install github.com/go-delve/delve/cmd/dlv@latest
+RUN go install honnef.co/go/tools/cmd/staticcheck@latest
+RUN go install golang.org/x/tools/gopls@latest
 RUN apt get update && apt get install -y htop
 USER codespace-go
