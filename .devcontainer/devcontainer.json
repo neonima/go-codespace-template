@@ -16,6 +16,25 @@
     "files.exclude": {
       "**/CODE_OF_CONDUCT.md": true,
       "**/LICENSE": true
-    }
-  }
+    },
+    "terminal.integrated.profiles.linux": {
+      "ZSH": {
+        "path": "zsh"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "ZSH"
+  },
+  "features": {
+    "docker-in-docker": "latest",
+		"github-cli": "latest",
+    "kubectl-helm-minikube": {
+      "version": "latest",
+      "helm": "latest",
+      "minikube": "latest"
+    },
+    "common": "latest",
+    "sshd": "latest"
+  },
+  "remoteUser": "codespace",
+  "containerUser": "codespace"
 }
